@@ -1,6 +1,6 @@
 module "lambda-at-edge" {
   source  = "transcend-io/lambda-at-edge/aws"
-  version = "0.5.0"
+  version = "0.0.2"
 
   name        = var.name
   description = var.description
@@ -22,6 +22,7 @@ module "lambda-at-edge" {
     ui_subdomain             = var.ui_subdomain
     scopes                   = join(" ", var.scopes)
     client_secret_param_name = var.ssm_client_secret_param_name
+    runtime                  = "nodejs16.x"
   }
 
   ssm_params = {
