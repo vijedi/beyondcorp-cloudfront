@@ -20,7 +20,8 @@ module "lambda-at-edge" {
     userpool_id              = var.userpool_id
     client_id                = var.client_id
     userpool_region          = var.userpool_region
-    ui_subdomain             = var.ui_subdomain
+    ui_domain                = var.ui_domain
+    is_custom_ui_domain      = var.is_custom_ui_domain
     scopes                   = join(" ", var.scopes)
     client_secret_param_name = var.ssm_client_secret_param_name
   }

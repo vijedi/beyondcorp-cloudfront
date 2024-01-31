@@ -25,8 +25,13 @@ variable userpool_region {
   default     = "eu-west-1"
 }
 
-variable ui_subdomain {
-  description = "The subdomain used for the Amazon Cognito user pool UI"
+variable ui_domain {
+  description = "The (sub)domain used for the Amazon Cognito user pool UI"
+}
+
+variable is_custom_ui_domain {
+  description = "Is this a custom UI domain instead of a cognito subdomain"
+  default     = true
 }
 
 variable scopes {
