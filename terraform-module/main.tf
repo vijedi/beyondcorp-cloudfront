@@ -4,7 +4,7 @@ module "lambda-at-edge" {
 
   name        = var.name
   description = var.description
-  runtime     = "nodejs16.x"
+  runtime     = "nodejs18.x"
 
   lambda_code_source_dir = "${path.module}/../src"
   file_globs = [
